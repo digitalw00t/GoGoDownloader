@@ -1,0 +1,1 @@
+cd C:\Users\Karl.Hudgell\Documents\GoGoDownloader && venv\Scripts\activate && python GoGoDownloaderCLI.py

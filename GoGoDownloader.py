@@ -16,7 +16,7 @@ except AttributeError:
 
 
 def gogodownloader(config):
-    CURRENT_DOMAIN = config["CurrentGoGoAnimeDomain"]
+    CURRENT_URL = config["CurrentGoGoAnimeURL"]
     os.system("cls" if os.name == "nt" else "clear")
     while True:
         print(
@@ -45,7 +45,7 @@ def gogodownloader(config):
                 title = name.replace("-", " ").title().strip()
             else:
                 title = name.title().strip()
-            source = f"https://gogoanime.{CURRENT_DOMAIN}/category/{name}"
+            source = f"https://{CURRENT_URL}/category/{name}"
             with requests.get(source) as res:
                 if res.status_code == 200:
                     soup = BeautifulSoup(res.content, "html.parser")
@@ -139,7 +139,7 @@ def gogodownloader(config):
             title,
         )
         gogo.user_logged_in_check()
-        source = f"https://gogoanime.{CURRENT_DOMAIN}/{name}"
+        source = f"https://{CURRENT_URL}/{name}"
         with requests.get(source) as res:
             soup = BeautifulSoup(res.content, "html.parser")
             episode_zero = soup.find("h1", {"class": "entry-title"})  # value: 404
