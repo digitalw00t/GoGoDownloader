@@ -112,7 +112,7 @@ def gogodownloader(config):
                         ).print_error()
                     elif episode_end < episode_start:
                         CustomMessage(
-                            f"{ERR}episode_end cannot be less than or equal to episode_start"
+                            f"{ERR}episode_end cannot be less than episode_start"
                         ).print_error()
                     else:
                         break
