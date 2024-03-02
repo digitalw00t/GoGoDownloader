@@ -243,7 +243,7 @@ class gogoanime:
             bookmarkList.append(
                 {
                     "showName": animeName,
-                    "latestEpisode": int(episodeNum),
+                    "latestEpisode": float(episodeNum),
                     "downloadURL": f"https://{self.config['CurrentGoGoAnimeURL']}/{animeDownloadName}-episode-{str(episodeNum)}",
                 }
             )
